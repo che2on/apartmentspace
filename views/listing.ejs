@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/heroic-features.css">
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">Apartment Ad Space</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling-->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav pull-right">
+          <% if (user.local.email) { %>
+            <li><a href="#" class="pull-right">Submit Space</a></li>
+            <li><a href="#" class="pull-right">Welcome <%= user.local.email %></a></li>
+            <li><a href="/logout" class="pull-right">Logout</a></li>
+          <% } else { %>
+            <li><a href="/login" class="pull-right">Login</a></li>
+            <li><a href="/signup" class="pull-right">Register</a></li>
+          <% } %> 
+          </ul>
+        </div>
+        <!-- /.navbar-collapse-->
+      </div>
+      <!-- /.container-->
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="row">
+            <form role="form">
+              <div class="form-group">
+                <input id="exampleInputEmail1" type="text" placeholder="Location" class="form-control">
+              </div>
+              <div class="form-group">
+                <input id="exampleInputPassword1" type="text" placeholder="Advertisement Size" class="form-control">
+              </div>
+              <div class="form-group">
+                <input id="exampleInputPassword1" type="text" placeholder="Duration" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-success">Search</button>
+            </form>
+          </div>
+          <div class="row">
+            <h3>Filters</h3>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">3 Floor Apartments
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">Independent Apartments
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">Near to city
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">Hospitals nearby
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">10 day delivery
+              </label>
+            </div>
+          </div>
+        </div>
+        <div style="padding-left:100px" class="col-md-8">
+          <div class="row">
+            <div class="col-md-1">
+              <p>Pricing</p>
+            </div>
+            <div class="col-md-1">
+              <div class="btn-group">
+                <button type="button" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">7600<span class="caret"></span></button>
+                <ul class="dropdown-menu"></ul>
+              </div>
+            </div>
+            <div class="col-md-1">
+              <p style="text-align:center">to</p>
+            </div>
+            <div class="col-md-1">
+              <div class="btn-group">
+                <button type="button" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">22600<span class="caret"></span></button>
+                <ul class="dropdown-menu"></ul>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6">
+              <p>Sort: Best Match / Low to High </p>
+            </div>
+          </div>
+          <div class="row">
+            <ul class="list-group">
+              <li>
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <div class="panel-more1"><img src="http://lorempixel.com/150/150"></div>
+                    <div class="panel-info">
+                      <p><strong>MSR Gateway</strong></p>
+                      <p>Short description of the listing<br>the description part<br>here it ends....<br>
+                        <div class="btn-group">
+                          <button type="button" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Map<span class="caret"></span></button>
+                          <ul class="dropdown-menu"></ul>
+                        </div>
+                      </p>
+                    </div>
+                    <div class="panel-rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                      <p>4 Ratings</p>
+                    </div>
+                    <div class="panel-more1">
+                      <div style="text-align:center">
+                        <p style="font-size: 44px;">7900 INR</p>
+                      </div><br>
+                      <div style="text-align:center"><a href="#" class="btn btn-success">Book</a></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <div class="panel-more1"><img src="http://lorempixel.com/150/150"></div>
+                    <div class="panel-info">
+                      <p><strong>Purvankara Apartments</strong></p>
+                      <p>Short description of the listing<br>the description part...<br>here it ends...<br>
+                        <div class="btn-group">
+                          <button type="button" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Map<span class="caret"></span></button>
+                          <ul class="dropdown-menu"></ul>
+                        </div>
+                      </p>
+                    </div>
+                    <div class="panel-rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                      <p>3 Ratings</p>
+                    </div>
+                    <div class="panel-more1">
+                      <div style="text-align:center">
+                        <p style="font-size: 44px;">4500 INR</p>
+                      </div><br>
+                      <div style="text-align:center"><a href="#" class="btn btn-success">Book</a></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <div class="panel-more1"><img src="http://lorempixel.com/150/150"></div>
+                    <div class="panel-info">
+                      <p><strong>Victoria Apartments</strong></p>
+                      <p>Short description of the listing<br>the description part<br>here it ends....<br>
+                        <div class="btn-group">
+                          <button type="button" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Map<span class="caret"></span></button>
+                          <ul class="dropdown-menu"></ul>
+                        </div>
+                      </p>
+                    </div>
+                    <div class="panel-rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                      <p>4 Ratings</p>
+                    </div>
+                    <div class="panel-more1">
+                      <div style="text-align:center">
+                        <p style="font-size: 44px;">3500 INR</p>
+                      </div><br>
+                      <div style="text-align:center"><a href="#" class="btn btn-success">Book</a></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <div class="panel-more1"><img src="http://lorempixel.com/150/150"></div>
+                    <div class="panel-info">
+                      <p><strong>New stone apartments</strong></p>
+                      <p>Short description of the listing<br>the description part...<br>here it ends...<br>
+                        <div class="btn-group">
+                          <button type="button" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Map<span class="caret"></span></button>
+                          <ul class="dropdown-menu"></ul>
+                        </div>
+                      </p>
+                    </div>
+                    <div class="panel-rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                      <p>3 Ratings</p>
+                    </div>
+                    <div class="panel-more1">
+                      <div style="text-align:center">
+                        <p style="font-size: 44px;">9450 INR</p>
+                      </div><br>
+                      <div style="text-align:center"><a href="#" class="btn btn-success">Book</a></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright © Apartment space 2014</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/javascripts/jquery-1.8.3.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+  </body>
+</html>
